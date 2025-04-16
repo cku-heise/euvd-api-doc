@@ -12,19 +12,19 @@ This is just by looking at the web site, and it's a WIP. More for my personal us
 ## Endpoints
 ### Search Vulnerabilities
 * /vulnerabilities
-* assigner= (CNA name, like "Linux" or "ENISA") 
-* product=
-* vendor=
-* text=
-* fromDate=
-* toDate=
-* fromScore= (int) [0..10]
-* toScore= (int) [0..10]
-* fromEpss= (int) [0..100]
-* toEpss=100 (int) [0..100]
-* exploited= bool
-* page=0 (int)
-* size=10 (int)
+** assigner= (CNA name, like "Linux" or "ENISA") 
+** product=
+** vendor=
+** text=
+** fromDate=
+** toDate=
+** fromScore= (int) [0..10]
+** toScore= (int) [0..10]
+** fromEpss= (int) [0..100]
+** toEpss=100 (int) [0..100]
+** exploited= bool
+** page=0 (int)
+** size=10 (int)
 
 Returns JSON
 ```
@@ -66,13 +66,13 @@ Returns JSON
 }
 ```
 ### list critical / exploited / last vulns
-- /criticalvulnerabilities - convenience API call, alias for ?fromScore=9&toScore=10
-- /exploitedvulnerabilities - convenience API call, alias for ?exploited=1
-- /lastvulnerabilities - probably convenience API call, alias for some kind of fromDate magic?
+* /criticalvulnerabilities - convenience API call, alias for ?fromScore=9&toScore=10
+* /exploitedvulnerabilities - convenience API call, alias for ?exploited=1
+* /lastvulnerabilities - probably convenience API call, alias for some kind of fromDate magic?
 
 ### Lookup by EUVD-ID
-/enisaid
-  ?id=EUVD-2025-11105
+* /enisaid
+** ?id=EUVD-2025-11105
 
 Returns JSON
 ```
