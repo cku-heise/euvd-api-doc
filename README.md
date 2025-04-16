@@ -10,7 +10,7 @@ This is just by looking at the web site, and it's a WIP. More for my personal us
 ## Base URL
 * https://euvdservices.enisa.europa.eu/api/
 ## Endpoints
-### List Vulnerabilities
+### Search Vulnerabilities
 * /vulnerabilities
 * assigner= (CNA name, like "Linux" or "ENISA") 
 * product=
@@ -27,6 +27,7 @@ This is just by looking at the web site, and it's a WIP. More for my personal us
 * size=10 (int)
 
 Returns JSON
+```
 {
     "items": [
         {
@@ -63,6 +64,7 @@ Returns JSON
     ],
     "total": 168061
 }
+```
 ### list critical / exploited / last vulns
 - /criticalvulnerabilities - convenience API call, alias for ?fromScore=9&toScore=10
 - /exploitedvulnerabilities - convenience API call, alias for ?exploited=1
@@ -73,6 +75,7 @@ Returns JSON
   ?id=EUVD-2025-11105
 
 Returns JSON
+```
 {
     "id": "EUVD-2024-51869",
     "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nALSA: usb-audio: Fix potential out-of-bound accesses for Extigy and Mbox devices\n\nA bogus device can provide a bNumConfigurations value that exceeds the\ninitial value used in usb_get_configuration for allocating dev-\u003econfig.\n\nThis can lead to out-of-bounds accesses later, e.g. in\nusb_destroy_configuration.",
@@ -430,3 +433,4 @@ Returns JSON
         }
     ]
 }
+```
