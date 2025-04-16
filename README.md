@@ -3,28 +3,28 @@
 This is just by looking at the web site, and it's a WIP. More for my personal use, but if I help you not do the same work, all the better.
 
 ## Authentication
-- none for read requests? At least no authentication headers in XHR
+* none for read requests? At least no authentication headers in XHR
 ## Return codes
-- Seems to return 403 even if request is authorized, but syntactically incorrect (i.e. using float for fromScore)
-- 
+* Seems to return 403 even if request is authorized, but syntactically incorrect (i.e. using float for fromScore)
+
 ## Base URL
 * https://euvdservices.enisa.europa.eu/api/
 ## Endpoints
 ### Search Vulnerabilities
 * /vulnerabilities
-** assigner= (CNA name, like "Linux" or "ENISA") 
-** product=
-** vendor=
-** text=
-** fromDate=
-** toDate=
-** fromScore= (int) [0..10]
-** toScore= (int) [0..10]
-** fromEpss= (int) [0..100]
-** toEpss=100 (int) [0..100]
-** exploited= bool
-** page=0 (int)
-** size=10 (int)
+- assigner= (CNA name, like "Linux" or "ENISA") 
+- product=
+- vendor=
+- text=
+- fromDate=
+- toDate=
+- fromScore= (int) [0..10]
+- toScore= (int) [0..10]
+- fromEpss= (int) [0..100]
+- toEpss=100 (int) [0..100]
+- exploited= bool
+- page=0 (int)
+- size=10 (int)
 
 Returns JSON
 ```
@@ -72,7 +72,7 @@ Returns JSON
 
 ### Lookup by EUVD-ID
 * /enisaid
-** ?id=EUVD-2025-11105
+- ?id= EUVD-2025-11105
 
 Returns JSON
 ```
